@@ -1,5 +1,6 @@
 .back{
-  height: 100%;
+  min-height: 100vh;
+  /* height: 100%; */
   background: linear-gradient(lightCyan, skyBlue, deepSkyBlue);
 }
 
@@ -9,9 +10,15 @@
   text-align: center;
 }
 
-.header>h2{
+.header> .header_box{
   margin: 0;
   padding-top: 108px
+}
+
+.header_box > img{
+  padding: 10px 18px;
+  background-color: white;
+  border-radius: 20px;
 }
 
 .content{
@@ -30,6 +37,21 @@
   border-radius: 15px;
   text-align: center;
 }
-.login_tittle{
-  /* background-color: red; */
+
+.ID_div{
+  display: flex;
+}
+.PW_div{
+  display: flex;
+}
+
+
+
+
+.footer{
+  margin: 0px;
+  text-align: center;
+}
+.footer > h3{
+  margin: 0px;
 }
