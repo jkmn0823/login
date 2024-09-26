@@ -1,8 +1,23 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import "../css/Login.css"
 import googleimg from "../image/google_home.png"
+import { useState } from "react";
+
 
 function Login(){
+
+  const [ID, setID] = useState("");
+  const [PW, setPW] = useState("");
+  function IDPW(){
+    console.log("아이디 : ",ID);
+    console.log("비밀번호 : ",PW);
+
+    setID("")
+    setPW("")
+  }
+
+
   return(
     <div className="back">
       <header className="header">
@@ -12,27 +27,22 @@ function Login(){
       </header>
       <div className="content">
         <div className="login_box">
-          <div className="login_tittle">
-            <h3>로그인박스</h3>
-          </div>
           <form action=""> {/**백엔드로 전해지는 url */}
             <div className="ID_div">
-              <p>ID</p>
-              <input type="text" name="ID"/>
+              <input type="text" name="ID" placeholder="ID 입력" value={ID} onChange={(e)=>setID(e.target.value)}/>
             </div>
             <div className="PW_div">
-              <p>Password</p>
-              <input type="password" />
+              <input type="password" name="PW" placeholder="PW 입력" value={PW} onChange={(e)=>setPW(e.target.value)}/>
             </div>
             <div className="login_complete">
-              <button>로그인</button>
+              <button type="button" onClick={IDPW}>로그인</button>
             </div>
           </form>
-          <p>회원이 아니신가요?</p>
+          <Link to="/SignUp">회원이 아니신가요?</Link>
         </div>
       </div>
       <div className="footer">
-        <h3>하나둘셋</h3>
+        {/* <h3>하나둘셋</h3> */}
       </div>
     </div>
   );
