@@ -38,7 +38,9 @@ function Login(){
               <button type="button" onClick={IDPW}>로그인</button>
             </div>
           </form>
-          <Link to="/SignUp">회원이 아니신가요?</Link>
+          <div className="next">
+            <Link to="/SignUp" className="next_page_acc">회원이 아니신가요?</Link>
+          </div>
         </div>
       </div>
       <div className="footer">
